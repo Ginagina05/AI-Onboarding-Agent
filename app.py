@@ -41,10 +41,13 @@ with col_title:
     st.title("GINA AI Agent")
 
 # --- Initialize OpenAI client ---
+import os
+
 client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
     http_client=httpx.Client(verify=False)
 )
-# --- Ensure output folder ---
+--- Ensure output folder ---
 os.makedirs("ai_onboarding_out", exist_ok=True)
 
 # --- Repository Input ---
