@@ -42,7 +42,6 @@ with col_title:
 
 # --- Initialize OpenAI client ---
 client = OpenAI(
-    api_key="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",
     http_client=httpx.Client(verify=False)
 )
 # --- Ensure output folder ---
