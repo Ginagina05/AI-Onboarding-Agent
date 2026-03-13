@@ -153,7 +153,7 @@ if prompt := st.chat_input("Type your message..."):
                     *st.session_state.chat_history,
                     {"role": "user", "content": prompt}
                 ],
-            )
+            ) 
             reply = response.output[0].content[0].text
             st.chat_message("assistant").write(reply)
             st.session_state.chat_history.append({"role": "assistant", "content": reply})

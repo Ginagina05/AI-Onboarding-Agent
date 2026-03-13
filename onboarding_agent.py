@@ -74,7 +74,7 @@ STOP = set(
     test tests unit integration e2e mock stub spy todo fixme hack
     """.split()
 )
-
+ 
 def tokenize(text: str) -> List[str]:
     words = [w.lower() for w in WORD_RE.findall(text)]
     return [w for w in words if w not in STOP and len(w) > 1]
